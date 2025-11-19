@@ -44,5 +44,20 @@ public class Main {
         System.out.println("Размер: " + stack1.getSize());
         System.out.println("Вершина (peek): " + stack1.peek());
         System.out.println("Pop: " + stack1.pop());
+
+        System.out.println("\n=== Задание 2.2: Стек на наследовании + Ввод строк ===");
+        Scanner scanner = new Scanner(System.in);
+        InStack<String> strStack = new InStack<>();
+
+        System.out.println("Введите 5 строк:");
+        for (int i = 0; i < 5; i++) {
+            System.out.print((i+1) + ": ");
+            strStack.push(scanner.nextLine());
+        }
+
+        System.out.println("В обратном порядке:");
+        while (!strStack.isEmpty()) {
+            System.out.println(strStack.pop());
+        }
     }
 }
