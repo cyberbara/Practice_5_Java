@@ -8,5 +8,9 @@ public class Main {
         // 1.2
         Integer[] arr = {1, 5, 9};
         System.out.println(Alghoritms.lSearch(arr, 5));
+
+        // 1.3
+        Circle[] c = {new Circle(2), new Circle(5)};
+        System.out.println(Alghoritms.max(c));
     }
 }
