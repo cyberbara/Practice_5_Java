@@ -24,4 +24,13 @@ public class Alghoritms {
         }
         return max;
     }
+    public static <E extends Comparable<E>> E max2d(E[][] list) {
+        E max = list[0][0];
+        for (E[] row : list) {
+            for (E el : row) {
+                if (el.compareTo(max) > 0) max = el;
+            }
+        }
+        return max;
+    }
 }
