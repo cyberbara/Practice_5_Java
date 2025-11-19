@@ -11,4 +11,10 @@ public class Alghoritms {
         }
         return res;
     }
+    public static <E> int lSearch(E[] arr, E val) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i].equals(val)) return i;
+        }
+        return -1;
+    }
 }
