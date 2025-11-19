@@ -45,6 +45,17 @@ public class Main {
         System.out.println("Вершина (peek): " + stack1.peek());
         System.out.println("Pop: " + stack1.pop());
 
+        System.out.println("\n=== Задание 2.3: Глубокое клонирование (MyStack) ===");
+        MyStack original = new MyStack();
+        original.push("Original Data");
+
+        MyStack cloned = (MyStack) original.clone();
+
+        original.pop(); // Удаляем из оригинала
+
+        System.out.println("Размер оригинала: " + original.getSize());
+        System.out.println("Размер клона: " + cloned.getSize() + " (должен остаться 1)");
+
         System.out.println("\n=== Задание 2.2: Стек на наследовании + Ввод строк ===");
         Scanner scanner = new Scanner(System.in);
         InStack<String> strStack = new InStack<>();
